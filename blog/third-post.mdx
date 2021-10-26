@@ -3,6 +3,16 @@ title: "My Third Post"
 date: "2021-08-23"
 ---
 
-```
-This is code
+```javascript{1,4-6}
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`, 
+    options: { // highlight-line
+      plugins: [
+        `gatsby-remark-prismjs`,
+      ]
+    }
+  }
+]
 ```
