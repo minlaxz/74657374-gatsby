@@ -18,7 +18,6 @@ const IndexPages = () => {
     const data = useStaticQuery(graphql`
     query MyQuery {
         site {
-            host
             siteMetadata {
                 siteUrl
                 title
@@ -35,7 +34,6 @@ const IndexPages = () => {
                     ?
                     (
                         <div style={{ color: "#1d3c47" }}>
-                            <p>host : {data.site.host}</p>
                             <p>siteUrl: {data.site.siteMetadata.siteUrl}</p>
                             <p>title: {data.site.siteMetadata.title}</p>
                         </div>
