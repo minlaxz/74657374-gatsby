@@ -7,13 +7,13 @@ const BlogPage = ({ data }) => {
         <Layout pageTitle="My Blog Posts">
             {
                 data.allMdx.nodes.map((node) => (
-                    <article key={node.id} style={{ border: "1px dotted #663399", margin: "0.5em", padding: "1em" }}>
-                        <h2>
-                            <Link to={`/blog/${node.slug}`}>
+                    <article key={node.id} style={{ border: "1px dotted #663399", margin: "0.5em", padding: "1em", borderRadius: "10px" }}>
+                        <h3>
+                            <Link to={`/blog/${node.slug}`} style={{color:"hotpink"}} >
                                 {node.frontmatter.title}
                             </Link>
-                        </h2>
-                        <p>Posted: {node.frontmatter.date}</p>
+                        </h3>
+                        <pre>Posted: {node.frontmatter.date}</pre>
                     </article>
                 ))
             }
