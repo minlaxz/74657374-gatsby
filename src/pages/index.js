@@ -5,10 +5,10 @@ import { StaticImage } from 'gatsby-plugin-image'
 const IndexPage = () => {
     return (
         <Layout pageTitle={`Home Page`}>
-            <p>
-                <code style={{ fontSize: "1.2em" }}>Demo of <b>React</b> in a <b>Gatsby</b>'s way.</code>
+            <p style={{ margin:"0.5em 0", padding:"0.5em 0" }}>
+                <span style={{ fontSize: "1.5rem" }}>Demo of <b>React</b> in a <b>Gatsby</b>'s way.</span>
             </p>
-            <p>Create by Min Min Latt, Check PGP ID :&nbsp;
+            <p style={{color:"#1e1e1e", margin:"0 0", padding:"0.5em 0"}}>Create by Min Min Latt, Check PGP ID :&nbsp;
                 <a
                     target={'_blank'}
                     rel={'noopener noreferrer'}
@@ -19,7 +19,7 @@ const IndexPage = () => {
                     }}>&lt; minlaxz &gt;</a>
             </p>
             <StaticImage
-                style={{borderRadius: "10px"}}
+                style={{ borderRadius: "10px" }}
                 alt="black Schnauzer dog with sunglasses on a white background"
                 src="../images/flouffy-qEO5MpLyOks-unsplash.jpg"
             />

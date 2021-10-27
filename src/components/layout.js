@@ -3,8 +3,12 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-    margin: auto;
-    max-width: 500px;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
     font-family: sans-serif;
 `;
 
@@ -19,6 +23,9 @@ padding-right: 2rem;
 `;
 
 const StyledHeading = styled.h1`
+font-size: 1.5em;
+margin: 0.67em 0;
+font-weight: 500;
 color: rebeccapurple;
 `;
 
