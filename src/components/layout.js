@@ -8,7 +8,8 @@ const StyledDiv = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 100vw;
+    width: 100%;
+    margin: 0px;
     font-family: sans-serif;
 `;
 
@@ -36,6 +37,19 @@ font-weight: 700;
 margin: 3rem 0;
 `;
 
+const StyledMain = styled.main`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+@media only screen and (min-width: 768px) {
+    width: 75%;
+}
+margin: 0px;
+`;
+
+
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(graphql`
     query {
@@ -57,10 +71,10 @@ const Layout = ({ pageTitle, children }) => {
                     <StyledLinksItem><Link to="/blog" style={{ color: "black" }}>Blog</Link></StyledLinksItem>
                 </StyledLinks>
             </nav>
-            <main>
+            <StyledMain>
                 <StyledHeading>{pageTitle}</StyledHeading>
                 {children}
-            </main>
+            </StyledMain>
         </StyledDiv>
     )
 }
